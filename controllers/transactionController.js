@@ -21,7 +21,7 @@ exports.getTransactions = async (req, res) => {
 exports.addTransaction = async (req, res, next) => {
 
     try {
-        const { transactionName, amount } = req.body;
+        const { text, amount } = req.body;
 
         const transaction = await TransactionModel.create(req.body);
 
